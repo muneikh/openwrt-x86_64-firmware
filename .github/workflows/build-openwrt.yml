@@ -23,7 +23,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -71,14 +71,14 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        echo "src-git oui https://github.com/zhaojh329/oui.git" >> feeds.conf.default
-        echo "src-git oui https://github.com/zhaojh329/oui.git" >> feeds.conf
+        # echo "src-git oui https://github.com/zhaojh329/oui.git" >> feeds.conf.default
+        # echo "src-git oui https://github.com/zhaojh329/oui.git" >> feeds.conf
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a oui
+      run: cd openwrt && ./scripts/feeds update -a
       
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a -p oui
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
