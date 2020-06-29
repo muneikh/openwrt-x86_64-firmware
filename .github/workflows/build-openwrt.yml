@@ -14,7 +14,7 @@ on:
     types: published
   push:
     branches:
-      - rpi-compile
+      - master
     paths:
       - '.config'
 #  schedule:
