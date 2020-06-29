@@ -14,7 +14,6 @@ on:
     types: published
   push:
     branches:
-      - master
       - rpi-compile
     paths:
       - '.config'
