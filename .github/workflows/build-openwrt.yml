@@ -10,10 +10,14 @@ name: Build OpenWrt
 
 on:
   push:
-    branches:
-      - rpi-compile
-    paths:
-      - '.config'
+    branches: [ master ]
+
+# on:
+#   push:
+#     branches:
+#       - rpi-compile
+#     paths:
+#       - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
