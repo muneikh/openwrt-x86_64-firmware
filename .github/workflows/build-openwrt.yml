@@ -10,7 +10,7 @@ name: Build OpenWrt
 
 on:
   push:
-    branches: [ master ]
+    branches: [ rpi-compile ]
 
 # on:
 #   push:
